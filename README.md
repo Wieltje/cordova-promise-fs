@@ -31,6 +31,7 @@ Or just download and include [CordovaPromiseFS.js](https://raw.githubusercontent
 ```javascript
 var fs = CordovaPromiseFS({
   persistent: true, // or false
+  fileSystem: cordova.file.externalDataDirectory, //optional, overrides persistent, use if you want to use custom directory
   storageSize: 20*1024*1024, // storage size in bytes, default 20MB 
   concurrency: 3 // how many concurrent uploads/downloads?
   Promise: require('promiscuous') // Your favorite Promise/A+ library! 
